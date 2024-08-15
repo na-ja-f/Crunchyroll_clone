@@ -3,7 +3,7 @@ import Banner from '@/components/Banner'
 import MoviesList from '@/components/MoviesList'
 import Navbar from '@/components/Navbar'
 import NewEpisodes from '@/components/NewEpisodes'
-import React from 'react'
+// import React from 'react'
 import ad from "../assets/ad.png"
 import ad2 from "../assets/ad2.png"
 import Recommendation from '@/components/Recommendation'
@@ -13,7 +13,7 @@ import Footer from '@/components/Footer'
 
 function HomePage() {
     return (
-        <div className=''>
+        <div>
             <Navbar />
             <Banner />
             <MoviesList

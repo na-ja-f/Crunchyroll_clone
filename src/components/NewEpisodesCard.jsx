@@ -8,7 +8,7 @@ function NewEpisodesCard({item, index}) {
     return (
         <div
             key={index}
-            className={`w-full h-24 flex gap-2 items-center ${hoveredIndex === index ? 'bg-[#23252b]/90' : ''}`}
+            className={`w-full h-24 flex gap-2 mb-3 lg:mb-0 items-center ${hoveredIndex === index ? 'bg-[#23252b]/90' : ''}`}
             onMouseOver={() => setHoveredIndex(index)} // Set the hovered index
             onMouseOut={() => setHoveredIndex(null)}  // Reset the hovered index
         >

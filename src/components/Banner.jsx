@@ -20,7 +20,7 @@ function Banner() {
             setTimeLeft(prevTime => {
                 if (prevTime === 1) {
                     nextSlide();
-                    return 5; // Reset time left
+                    return 5;
                 }
                 return prevTime - 1;
             });
@@ -49,17 +49,17 @@ function Banner() {
     return (
         <>
             {banners.length > 0 && (
-                <div className="bg-slate-300 w-full h-[140vh] -mb-72">
-                    <div className="relative w-full pb-64 h-full flex items-center bg-center bg-cover transition-shadow duration-1000"
+                <div className="w-full h-[65vh] lg:h-[140vh] pt-12 lg:-mb-72">
+                    <div className="relative  w-full pb-64 h-full flex items-center bg-center bg-cover transition-shadow duration-1000"
                         style={{ backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url(${IMAGE_URL + banners[currentIndex].backdrop_path})` }}>
-                        <div className="absolute w-4/12 left-16">
-                            <div className="font-semibold text-6xl cursor-pointer">
+                        <div className="absolute w-full h-full lg:w-4/12 lg:left-16 flex flex-col justify-end lg:justify-center items-center lg:items-start">
+                            <div className="font-semibold text-3xl lg:text-6xl cursor-pointer">
                                 {banners[currentIndex].name.slice(0, 15)}
                             </div>
                             <div className="font-normal text-gray-400 mt-5">
                                 Orginal Language | {banners[currentIndex].original_language}
                             </div>
-                            <div className="font-normal mt-1">
+                            <div className="font-normal mt-1 hidden lg:block">
                                 {banners[currentIndex].overview.slice(0, 300)}...
                             </div>
                             <div className="flex items-center mt-5 gap-2">
@@ -96,14 +96,14 @@ function Banner() {
                             </div>
 
                         </div>
-                        <div className="absolute bottom-0 h-[100vh] w-full bg-gradient-to-b from-transparent via-[rgba(0,0,0,0)] to-[rgba(0,0,0,1)]"></div>
+                        <div className="absolute bottom-0 h-[40vh] lg:h-[100vh] w-full bg-gradient-to-b from-transparent via-[rgba(0,0,0,0)] to-[rgba(0,0,0,1)]"></div>
                     </div>
                     {/* Left Arrow */}
-                    <div onClick={prevSlide} className='absolute top-[45%] left-2 text-2xl text-white cursor-pointer'>
+                    <div onClick={prevSlide} className='absolute top-[30%] lg:top-[45%] left-2 text-2xl text-white cursor-pointer'>
                         <ChevronLeft size={40} />
                     </div>
                     {/* Right Arrow */}
-                    <div onClick={nextSlide} className='absolute top-[45%] right-2 text-2xl text-white cursor-pointer'>
+                    <div onClick={nextSlide} className='absolute top-[30%] lg:top-[45%] right-2 text-2xl text-white cursor-pointer'>
                         <ChevronRight size={40} />
                     </div>
                 </div>

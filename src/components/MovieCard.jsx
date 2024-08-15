@@ -10,7 +10,7 @@ function MovieCard({ data }) {
     <div
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
-      className='relative w-[255px] h-[450px] flex items-center bg-center bg-cover'
+      className='relative w-[175px] h-[350px] lg:w-[255px] lg:h-[450px] flex items-center bg-center bg-cover'
       style={{ backgroundImage: `url(${IMAGE_URL + data.backdrop_path})` }}>
       {isHover ? (
         <div className='absolute cursor-pointer bg-[#23252b]/90 h-full w-full bottom-0 font-semibold p-2'>
